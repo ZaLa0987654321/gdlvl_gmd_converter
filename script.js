@@ -33,7 +33,7 @@ document.getElementById('file-input').addEventListener('change', async (event) =
 });
 
 downloadBtn.addEventListener('click', function() {
-  const blob = new Blob([xml_content], { type: 'text/xml;charset=utf-8;' });
+  const blob = new Blob([xml_content], { type: 'application/octet-stream;charset=utf-8;' });
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;
@@ -89,7 +89,7 @@ document.getElementById('file-input2').addEventListener('change', async (event) 
 });
 
 downloadBtn2.addEventListener('click', function() {
-  const blob = new Blob([gdlvl_output], { type: 'text/xml;charset=utf-8;' });
+  const blob = new Blob([gdlvl_output], { type: 'application/octet-stream;charset=utf-8;' });
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;
